@@ -1,6 +1,6 @@
 const googleReviewImg = "https://res.cloudinary.com/dui1jsojt/image/upload/v1777092671/tarang-assets/Google_Review__1__1773512308220.png";
 const spoonForkImg = "https://res.cloudinary.com/dui1jsojt/image/upload/v1777092667/tarang-assets/19_1773512274982.png";
-import lightBgPattern from "@assets/Untitled_design_(15)_1777395307345.png";
+const lightBgPattern = "/welcome-light-bg.png";
 import { useLocation } from "wouter";
 import { useWelcomeAudio } from "../hooks/useWelcomeAudio";
 import { MediaPreloader } from "../components/media-preloader";
