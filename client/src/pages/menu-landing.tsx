@@ -1600,7 +1600,7 @@ export default function MenuLanding() {
                     {isMocktails && (
                       <div className="absolute top-3 left-0 z-10">
                         <span
-                          className="block text-[9px] font-black uppercase tracking-wider pl-2 pr-3 py-1"
+                          className="block text-[11px] font-black uppercase tracking-wider pl-2 pr-4 py-1.5"
                           style={{
                             background: "#DC2626",
                             color: "#FFFFFF",
