@@ -327,6 +327,20 @@ export default function CategorySelection() {
     if (categoryId === "food") {
       return subcategories.filter((s) => s.id !== "desserts");
     }
+    if (categoryId === "bar") {
+      const filtered = subcategories.filter(
+        (s) => s.id !== "offer-cocktails" && s.id !== "offer-mocktails"
+      );
+      const cocktailsIdx = filtered.findIndex((s) => s.id === "cocktails");
+      const mocktailsIdx = filtered.findIndex((s) => s.id === "mocktails-drinks");
+      if (cocktailsIdx !== -1 && mocktailsIdx !== -1 && mocktailsIdx !== cocktailsIdx + 1) {
+        const reordered = [...filtered];
+        const [mocktailsItem] = reordered.splice(mocktailsIdx, 1);
+        reordered.splice(cocktailsIdx + 1, 0, mocktailsItem);
+        return reordered;
+      }
+      return filtered;
+    }
     return subcategories;
   }, [subcategories, categoryId]);
 
